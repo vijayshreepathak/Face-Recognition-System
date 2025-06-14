@@ -1,83 +1,137 @@
-# Facial Recognition System
+# 👤 Facial Recognition System
 
-A modern, user-friendly facial recognition system built with Streamlit and OpenCV. This project allows you to register faces (from webcam or image), recognize faces in real time or from images, and view all registered faces. It uses a robust deep learning-based face detector for high accuracy.
+A modern, user-friendly facial recognition system built with **Streamlit** and **OpenCV**. This application enables users to register faces (via webcam or image), perform real-time or image-based face recognition, and view all stored faces in a sleek, interactive UI.
 
-## Features
+## ✨ Features
 
-- 📸 **Register new faces** from webcam or image upload
-- 🔎 **Recognize faces** in real time (webcam) or from uploaded images
-- 🗂️ **View all registered faces** in a gallery
-- ⚡ **Robust face detection** using OpenCV DNN (deep learning)
-- 🎨 **Modern, attractive UI** with Streamlit
-- 🗃️ **Persistent storage** of registered faces and encodings
+- 📸 **Register Faces** — Capture via webcam or upload an image
+- 🔍 **Real-Time Recognition** — Identify faces live through your webcam
+- 🖼️ **Image Recognition** — Detect and label faces in uploaded group photos
+- 🗂️ **Gallery View** — Browse through all registered users with name tags
+- 🧠 **Deep Learning Face Detection** — Powered by OpenCV's DNN module
+- 💾 **Persistent Local Storage** — Save face encodings and images
+- 🎨 **Clean Streamlit UI** — Simple, responsive, and intuitive interface
 
-## Demo
+---
 
-![Demo Screenshot](demo_screenshot.png)
+## 🧪 Demo
 
-## Installation
+## 🚀 Live Application
 
-1. **Clone this repository**
-2. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-   > Make sure you have Python 3.7+
+🔗 **Try it out here:**  
+👉 [https://face-recognition-system-u0nj.onrender.com/](https://face-recognition-system-u0nj.onrender.com/)
 
-3. **First run will download the DNN face detector models automatically** (requires internet connection).
+> ⏳ *Note: App may take up to 60 seconds to load initially due to Render's free-tier cold start.*
 
-## Usage
+---
 
-Start the app with:
+## ⚙️ Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/yourusername/Facial_Recognition_System.git
+cd Facial_Recognition_System
+
+# 2. Install dependencies
+pip install -r requirements.txt
+````
+
+> ✅ Make sure you have **Python 3.7+** installed.
+
+> 🌐 On the first run, the app will **automatically download** the required DNN face detection model files.
+
+---
+
+## ▶️ Usage
+
+To start the application locally:
+
 ```bash
 streamlit run app.py
 ```
 
-Open your browser to the URL shown in the terminal (usually http://localhost:8501).
-
-## How It Works
-
-### Register Face
-- Upload a photo or use your webcam to capture your face.
-- The system detects all faces in the image. If there are multiple, you can select which one to register.
-- Enter a name and register the face.
-
-### Recognize Faces
-- Upload a group photo or use your webcam.
-- The system detects and recognizes all faces, labeling known faces and marking unknown ones.
-
-### View Registered Faces
-- See all faces you have registered, with names and thumbnails.
-
-## Model Files
-- The app will automatically download the required DNN model files (`deploy.prototxt` and `res10_300x300_ssd_iter_140000.caffemodel`) into a `models/` directory on first run.
-
-## Project Structure
-```
-Facial_Expression/
-├── app.py
-├── requirements.txt
-├── README.md
-├── models/                  # DNN model files (auto-downloaded)
-├── known_faces/             # Registered face images
-├── encodings/               # Face encodings (pickled)
-```
-
-## Requirements
-- Python 3.7+
-- streamlit
-- opencv-contrib-python
-- numpy
-- pillow
-
-## Tips
-- For best results, use clear, well-lit images.
-- Register multiple angles of the same person for better recognition.
-- All data is stored locally; no images are uploaded to the cloud.
-
-## License
-MIT License
+Then open your browser and go to `http://localhost:8501`.
 
 ---
 
-**Enjoy your modern facial recognition system!** 
+## 🧠 How It Works
+
+### 📝 Register Face
+
+* Upload a photo or use your webcam to capture a face.
+* The system detects all visible faces.
+* You can select which face to register and assign a name.
+
+### 🕵️ Recognize Faces
+
+* Upload an image or enable webcam.
+* The system identifies known individuals and highlights unknown faces.
+
+### 🖼️ View Registered Faces
+
+* Browse through all stored faces along with their assigned names.
+* Helpful to confirm registrations or delete unwanted ones (if feature enabled).
+
+---
+
+## 📁 Project Structure
+
+```
+Facial_Recognition_System/
+├── app.py                 # Main Streamlit app
+├── requirements.txt       # Python dependencies
+├── README.md              # Project documentation
+├── models/                # Auto-downloaded DNN model files
+├── known_faces/           # Stored face images
+├── encodings/             # Pickled face encodings
+```
+
+---
+
+## 🧾 Requirements
+
+* Python 3.7+
+* streamlit
+* opencv-contrib-python
+* numpy
+* pillow
+
+Install them using:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 💡 Tips for Best Results
+
+* Use **well-lit**, **front-facing** images for better accuracy.
+* Register **multiple angles** of the same person.
+* All data is stored **locally** – no cloud uploads or third-party servers involved.
+
+---
+
+## 📦 Model Files
+
+No need for manual download! On the first run, the following model files are auto-downloaded into the `models/` folder:
+
+* `deploy.prototxt`
+* `res10_300x300_ssd_iter_140000.caffemodel`
+
+These power the OpenCV DNN face detector for high-accuracy recognition.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+> **Enjoy building and experimenting with your own facial recognition system!**
+> Contributions and feedback are welcome 🤝
+
+```
+
+---
